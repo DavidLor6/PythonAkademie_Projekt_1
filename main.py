@@ -1,6 +1,6 @@
 # Projekt 1 Textový analyzátor
 '''
-author =
+author = David Lorenc
 '''
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
