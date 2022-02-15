@@ -1,4 +1,4 @@
-# Projekt 1 - Textový analyzátor
+# Projekt_1 - Textový analyzátor
 '''
 author = David Lorenc
 '''
