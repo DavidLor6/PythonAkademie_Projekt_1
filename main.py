@@ -54,3 +54,27 @@ if cislo_textu not in [1, 2, 3]:
 else:
     vybrany_text = TEXTS[cislo_textu - 1]
 
+# statistiky
+    # ----- 1
+list_slov = []
+for slovo in vybrany_text.split():
+    list_slov.append(slovo.strip(",."))
+no_of_words = len(list_slov)
+    # ----- 2
+list_titlecase_words = []
+for slovo in vybrany_text.split():
+    list_titlecase_words.append(slovo.strip(".,").istitle())
+    no_of_titlecase_words = sum(list_titlecase_words)
+    # ----- 3
+list_uppercase_words = []
+for slovo in vybrany_text.split():
+    list_uppercase_words.append(slovo.strip(".,").isupper() and slovo.strip(".,").isalpha())
+    no_of_uppercase_words = sum(list_uppercase_words)
+
+
+#no_of_lowercase_words =
+#no_of_numeric_string =
+#sum_of_all_numbers =
+print(no_of_words)
+print(no_of_titlecase_words)
+print(no_of_uppercase_words)
