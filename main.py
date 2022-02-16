@@ -105,24 +105,11 @@ for slovo in vybrany_text.split():
 
     # ----- print ze statistik
 print(
-    "There are", no_of_words, "words in the selected text."
-    "There are", no_of_titlecase_words, "titlecase words."
-    "There are", no_of_uppercase_words, "uppercase words."
-    "There are", no_of_lowercase_words, "lowercase words."
-    "There are", no_of_numeric_string, "numeric strings."
-    "The sum of all the numbers", sum_of_all_numbers,"."
+    "There are", no_of_words, "words in the selected text.", "\n"
+    "There are", no_of_titlecase_words, "titlecase words.", "\n"
+    "There are", no_of_uppercase_words, "uppercase words.", "\n"
+    "There are", no_of_lowercase_words, "lowercase words.", "\n"
+    "There are", no_of_numeric_string, "numeric strings.", "\n"
+    "The sum of all the numbers", sum_of_all_numbers
 )
-
-#There are 54 words in the selected text.
-#There are 12 titlecase words.
-#There are 1 uppercase words.
-#There are 38 lowercase words.
-#There are 3 numeric strings.
-#The sum of all the numbers 8510
-
-#print(no_of_words)
-#print(no_of_titlecase_words)
-#print(no_of_uppercase_words)
-#print(no_of_lowercase_words)
-#print(no_of_numeric_string)
-#print(sum_of_all_numbers)
+print(oddelovac)
