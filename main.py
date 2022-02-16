@@ -29,6 +29,8 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
+oddelovac = "-" * 40
+
 # registrovani uzivatele
 users = {
     "bob" : "123",
@@ -39,15 +41,18 @@ users = {
 # overeni hesla
 username = input("username:")
 password = input("password:")
+print(oddelovac)
 if users.get(username) == password:
     print(f"Welcome to the app, {username}.")
     print(f"We have {len(TEXTS)} texts to be analyzed.")
+    print(oddelovac)
 else:
     print("unregistered user, terminating the program..")
     exit()
 
 # vyber textu k analyze
 cislo_textu = int(input("Enter a number btw. 1 and 3 to select:"))
+print(oddelovac)
 if cislo_textu not in [1, 2, 3]:
     print(f"Text no. {cislo_textu} is not available")
     exit()
@@ -99,9 +104,25 @@ for slovo in vybrany_text.split():
         sum_of_all_numbers = sum(list_of_numbers)
 
     # ----- print ze statistik
-print(no_of_words)
-print(no_of_titlecase_words)
-print(no_of_uppercase_words)
-print(no_of_lowercase_words)
-print(no_of_numeric_string)
-print(sum_of_all_numbers)
+print(
+    "There are", no_of_words, "words in the selected text."
+    "There are", no_of_titlecase_words, "titlecase words."
+    "There are", no_of_uppercase_words, "uppercase words."
+    "There are", no_of_lowercase_words, "lowercase words."
+    "There are", no_of_numeric_string, "numeric strings."
+    "The sum of all the numbers", sum_of_all_numbers,"."
+)
+
+#There are 54 words in the selected text.
+#There are 12 titlecase words.
+#There are 1 uppercase words.
+#There are 38 lowercase words.
+#There are 3 numeric strings.
+#The sum of all the numbers 8510
+
+#print(no_of_words)
+#print(no_of_titlecase_words)
+#print(no_of_uppercase_words)
+#print(no_of_lowercase_words)
+#print(no_of_numeric_string)
+#print(sum_of_all_numbers)
