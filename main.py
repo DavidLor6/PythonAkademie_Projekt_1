@@ -29,3 +29,28 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
+# registrovani uzivatele
+users = {
+    "bob" : "123",
+    "ann" : "pass123",
+    "mike" : "password123",
+    "liz" : "pass123"
+}
+# overeni hesla
+username = input("username:")
+password = input("password:")
+if users.get(username) == password:
+    print(f"Welcome to the app, {username}.")
+    print(f"We have {len(TEXTS)} texts to be analyzed.")
+else:
+    print("unregistered user, terminating the program..")
+    exit()
+
+# vyber textu k analyze
+cislo_textu = int(input("Enter a number btw. 1 and 3 to select:"))
+if cislo_textu not in [1, 2, 3]:
+    print(f"Text no. {cislo_textu} is not available")
+    exit()
+else:
+    vybrany_text = TEXTS[cislo_textu - 1]
+
