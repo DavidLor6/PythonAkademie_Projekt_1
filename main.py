@@ -60,21 +60,41 @@ list_slov = []
 for slovo in vybrany_text.split():
     list_slov.append(slovo.strip(",."))
 no_of_words = len(list_slov)
+
     # ----- 2
 list_titlecase_words = []
 for slovo in vybrany_text.split():
     list_titlecase_words.append(slovo.strip(".,").istitle())
     no_of_titlecase_words = sum(list_titlecase_words)
+
     # ----- 3
 list_uppercase_words = []
 for slovo in vybrany_text.split():
     list_uppercase_words.append(slovo.strip(".,").isupper() and slovo.strip(".,").isalpha())
     no_of_uppercase_words = sum(list_uppercase_words)
 
+    # ----- 4
+list_lowercase_words = []
+for slovo in vybrany_text.split():
+    list_lowercase_words.append(slovo.strip(".,").islower())
+    no_of_lowercase_words = sum(list_lowercase_words)
 
-#no_of_lowercase_words =
-#no_of_numeric_string =
-#sum_of_all_numbers =
+    # ----- 5
+list_numeric_string = []
+for slovo in vybrany_text.split():
+    list_numeric_string.append(slovo.strip(".,").isnumeric())
+    no_of_numeric_string = sum(list_numeric_string)
+
+    # ----- 6
+list_of_numbers = []
+for slovo in vybrany_text.split():
+    if slovo.strip(".,").isnumeric():
+        list_of_numbers.append(int(slovo))
+        sum_of_all_numbers = sum(list_of_numbers)
+
 print(no_of_words)
 print(no_of_titlecase_words)
 print(no_of_uppercase_words)
+print(no_of_lowercase_words)
+print(no_of_numeric_string)
+print(sum_of_all_numbers)
