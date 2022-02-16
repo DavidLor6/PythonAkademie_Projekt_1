@@ -64,26 +64,32 @@ no_of_words = len(list_slov)
     # ----- 2
 list_titlecase_words = []
 for slovo in vybrany_text.split():
-    list_titlecase_words.append(slovo.strip(".,").istitle())
-    no_of_titlecase_words = sum(list_titlecase_words)
+    if slovo.strip(".,").istitle():
+        list_titlecase_words.append(slovo)
+        no_of_titlecase_words = len(list_titlecase_words)
+    #list_titlecase_words.append(slovo.strip(".,").istitle())
+    #no_of_titlecase_words = sum(list_titlecase_words)
 
     # ----- 3
 list_uppercase_words = []
 for slovo in vybrany_text.split():
-    list_uppercase_words.append(slovo.strip(".,").isupper() and slovo.strip(".,").isalpha())
-    no_of_uppercase_words = sum(list_uppercase_words)
+    if slovo.strip(".,").isupper() and slovo.strip(".,").isalpha():
+        list_uppercase_words.append(slovo)
+        no_of_uppercase_words = len(list_uppercase_words)
 
     # ----- 4
 list_lowercase_words = []
 for slovo in vybrany_text.split():
-    list_lowercase_words.append(slovo.strip(".,").islower())
-    no_of_lowercase_words = sum(list_lowercase_words)
+    if slovo.strip(".,").islower():
+        list_lowercase_words.append(slovo)
+        no_of_lowercase_words = len(list_lowercase_words)
 
     # ----- 5
 list_numeric_string = []
 for slovo in vybrany_text.split():
-    list_numeric_string.append(slovo.strip(".,").isnumeric())
-    no_of_numeric_string = sum(list_numeric_string)
+    if slovo.strip(".,").isnumeric():
+        list_numeric_string.append(slovo)
+        no_of_numeric_string = len(list_numeric_string)
 
     # ----- 6
 list_of_numbers = []
@@ -92,6 +98,7 @@ for slovo in vybrany_text.split():
         list_of_numbers.append(int(slovo))
         sum_of_all_numbers = sum(list_of_numbers)
 
+    # ----- print ze statistik
 print(no_of_words)
 print(no_of_titlecase_words)
 print(no_of_uppercase_words)
