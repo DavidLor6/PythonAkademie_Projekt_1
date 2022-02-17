@@ -106,3 +106,21 @@ print(
     "The sum of all the numbers", sum_of_all_numbers
 )
 print(oddelovac)
+
+# delka slov
+list_delky_slov = []
+for slovo in vybrany_text.split():
+    pocet_znaku = len(slovo.strip(".,"))
+    list_delky_slov.append(pocet_znaku)
+slovnik_vyskytu = {}
+for number in list_delky_slov:
+    if number not in slovnik_vyskytu:
+        slovnik_vyskytu[number] = 1
+    else:
+        slovnik_vyskytu[number] = slovnik_vyskytu[number] + 1
+
+print("LEN|OCCURENCES|NR.")
+print(oddelovac)
+
+for k, v in sorted(slovnik_vyskytu.items()):
+    print("pocet znaku", k, "cetnost", v)
