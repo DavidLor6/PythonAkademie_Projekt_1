@@ -123,4 +123,4 @@ print("LEN|OCCURENCES|NR.")
 print(oddelovac)
 
 for k, v in sorted(slovnik_vyskytu.items()):
-    print("pocet znaku", k, "cetnost", v)
+    print(k,"|","*" * v,"|",v)
