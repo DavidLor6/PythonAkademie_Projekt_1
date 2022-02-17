@@ -64,37 +64,30 @@ else:
 list_slov = []
 for slovo in vybrany_text.split():
     list_slov.append(slovo.strip(",."))
-no_of_words = len(list_slov)
 
     # ----- 2
 list_titlecase_words = []
 for slovo in vybrany_text.split():
     if slovo.strip(".,").istitle():
         list_titlecase_words.append(slovo)
-        no_of_titlecase_words = len(list_titlecase_words)
-    #list_titlecase_words.append(slovo.strip(".,").istitle())
-    #no_of_titlecase_words = sum(list_titlecase_words)
 
     # ----- 3
 list_uppercase_words = []
 for slovo in vybrany_text.split():
     if slovo.strip(".,").isupper() and slovo.strip(".,").isalpha():
         list_uppercase_words.append(slovo)
-        no_of_uppercase_words = len(list_uppercase_words)
 
     # ----- 4
 list_lowercase_words = []
 for slovo in vybrany_text.split():
     if slovo.strip(".,").islower():
         list_lowercase_words.append(slovo)
-        no_of_lowercase_words = len(list_lowercase_words)
 
     # ----- 5
 list_numeric_string = []
 for slovo in vybrany_text.split():
     if slovo.strip(".,").isnumeric():
         list_numeric_string.append(slovo)
-        no_of_numeric_string = len(list_numeric_string)
 
     # ----- 6
 list_of_numbers = []
@@ -105,11 +98,11 @@ for slovo in vybrany_text.split():
 
     # ----- print ze statistik
 print(
-    "There are", no_of_words, "words in the selected text.", "\n"
-    "There are", no_of_titlecase_words, "titlecase words.", "\n"
-    "There are", no_of_uppercase_words, "uppercase words.", "\n"
-    "There are", no_of_lowercase_words, "lowercase words.", "\n"
-    "There are", no_of_numeric_string, "numeric strings.", "\n"
+    "There are", len(list_slov), "words in the selected text.", "\n"
+    "There are", len(list_titlecase_words), "titlecase words.", "\n"
+    "There are", len(list_uppercase_words), "uppercase words.", "\n"
+    "There are", len(list_lowercase_words), "lowercase words.", "\n"
+    "There are", len(list_numeric_string), "numeric strings.", "\n"
     "The sum of all the numbers", sum_of_all_numbers
 )
 print(oddelovac)
