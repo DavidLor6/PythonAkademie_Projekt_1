@@ -124,3 +124,4 @@ print(oddelovac)
 
 for k, v in sorted(slovnik_vyskytu.items()):
     print("{0:>3}|{1:<18}|{2:<3}".format(k, "*" * v, v))
+
