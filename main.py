@@ -119,8 +119,8 @@ for number in list_delky_slov:
     else:
         slovnik_vyskytu[number] = slovnik_vyskytu[number] + 1
 
-print("LEN|OCCURENCES|NR.")
+print("{0:>3}|{1:^18}|{2:<3}".format("LEN", "OCCURENCES", "NR."))
 print(oddelovac)
 
 for k, v in sorted(slovnik_vyskytu.items()):
-    print(k,"|","*" * v,"|",v)
+    print("{0:>3}|{1:<18}|{2:<3}".format(k, "*" * v, v))
